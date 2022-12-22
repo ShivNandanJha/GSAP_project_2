@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+    font-family: 'Bebas Neue';
+}
+section{
+    padding: 3em;
+    height: 100vh;
+   
+}
+section  h1{
+    font-size: 5rem;
+}
+.overlay{
+    background: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    clip-path: circle(100px at 50% 50%);
+    clip-path: circle(100px at  var(--x,50%) var(--y,50%));
+    transition: clip-path 100ms; 
+}
+
+span{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    cursor: pointer;
+
+}
+svg{
+    margin: 1em;
+    fill: white;
+
+}
+.is-open{
+    clip-path:circle(200% at 100% 100%);
+    transition: clip-path 1.3s;
+    transition-timing-function: cubic-bezier(1,-0.01,.01,.99);
+}
